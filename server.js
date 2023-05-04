@@ -49,7 +49,7 @@ app.get('/token', (req, res) => {
 });
 
 app.post('/answerCall', (req, res) => {
-    const URL = req.baseUrl + 'routeCall';
+    const URL = 'https://phone-backend-c7pc.onrender.com' + '/routeCall';
     
     client.calls(req.body.id).update({ url: URL, method: 'POST' })
     .then(call => console.log(call))
